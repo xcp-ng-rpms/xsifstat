@@ -5,8 +5,12 @@ Summary:        Tool for visualising XenServer VIF metrics
 License:        LGPL+linking exception
 Group:          Development/Other
 URL:            https://github.com/xenserver/xsifstat/
-Source0:        https://code.citrite.net/rest/archive/latest/projects/XSU/repos/%{name}/archive?at=v%{version}&format=tar.gz&prefix=%{name}-%{version}#/%{name}-%{version}.tar.gz
+
+Source0: https://code.citrite.net/rest/archive/latest/projects/XSU/repos/xsifstat/archive?at=v1.0.1&format=tar.gz&prefix=xsifstat-1.0.1#/xsifstat-1.0.1.tar.gz
+
+
 Provides: gitsha(https://code.citrite.net/rest/archive/latest/projects/XSU/repos/xsifstat/archive?at=v1.0.1&format=tar.gz&prefix=xsifstat-1.0.1#/xsifstat-1.0.1.tar.gz) = 317d45f45b015ce911268facdc3eda397c93e2a4
+
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 Requires:       python
 
@@ -15,7 +19,7 @@ The xsifstat is a tool to expose metrics of the XenServer network subsystem on
 a per-VIF basis.
 
 %prep
-%autosetup -p1 -n xsifstat-1.0.1
+%autosetup -p1
 
 %build
 mkdir -p %{buildroot}
